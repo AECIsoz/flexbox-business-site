@@ -1,7 +1,7 @@
-#Project goals
+# Project goals
 In this project, I demonstrated my skills using flexbox to design and build the layout for an imaginary company’s homepage. I invented The Modern Knitting Society for my company, combining my hobbies of knitting and coding.
 
-##Project requirements
+## Project requirements
 
 Content-wise the homepage had to include:
 - A title and logo or splash image.
