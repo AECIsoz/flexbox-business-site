@@ -1,0 +1,365 @@
+/* universal styles */
+ul {
+    padding: 0;
+} 
+
+/* design styles */
+
+.design {
+    margin: 0 auto;
+    text-align: center;
+}
+.colors,
+.fonts {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 50px;
+}
+
+.colors div {
+    height: 200px;
+    width: 200px;
+    color: white;
+}
+.blackish {
+    background-color: #0B0C0D;
+}
+
+.blue-green {
+    background-color: #29A678;
+}
+
+.green {
+    background-color: #2E5939;
+}
+
+.light-gray {
+    background-color: #8FA690;
+}
+
+.pink {
+    background-color: #fce1e0;
+}
+
+.pink p {
+    color: black;
+}
+
+.fonts {
+    padding: 0 200px;
+}
+
+.fonts div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #2E5939;
+    height: 300px;
+    width: 300px;
+    padding: 0 2rem;
+}
+
+
+/* general styles 
+================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Text', serif;
+   }
+
+   h2 {
+       text-transform: uppercase;
+   }
+
+body {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    background-image: url("./resources/noor-sethi-4fkpoVusvJc-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* header section styles 
+================================================================== */
+
+header {
+    display: flex; 
+    justify-content: center;   
+    height: 350px;
+    }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #29A678;
+    height: 200px;
+    margin-top: 2rem;
+}
+
+nav h1 {
+    font-size: 3.6rem;
+    color: #fce1e0;
+    text-transform: uppercase;
+}
+
+.nav-item.medium-screen {
+    display: none;
+}
+
+/* tablet size screen */    
+
+@media (max-width: 1400px) {
+    nav h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    nav h1 {
+        font-size: 5rem;
+        letter-spacing: 0.6rem;;
+    }
+    .nav-item.large-screen {
+        display: none;
+    }
+    .nav-item.medium-screen {
+        display: block;
+    }
+}
+
+nav img {
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    padding-left: 2rem;
+}
+
+/* hamburger menu */
+
+/* [ON BIG SCREEN] */
+/* (A) WRAPPER */
+
+#hamnav {
+    width: 20%;
+}
+
+/* (B) HORIZONTAL MENU ITEMS */
+    #hamitems {
+        display: flex;
+        flex-direction: column;
+    }
+    #hamitems a {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    #hamitems a:hover {
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+/* (C) HIDE HAMBURGER */
+#hamnav label, #hamburger {
+    display: none;
+}
+
+/*  ON SMALL SCREEN */
+
+@media screen and (max-width: 768px) {
+    
+    /* (B) SHOW HAMBURGER MENU */
+    #hamnav label {
+        display: inline-block;
+        color: #0B0C0D;
+        background: #fce1e0;
+        font-style: normal;
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+    /* (C) TOGGLE SHOW/HIDE MENU */
+    #hamitems {
+        display: none;
+    }
+    #hamnav input:checked ~ #hamitems {
+        display: block;
+    }
+    #hamitems a {
+        font-size: 0.7rem;
+        padding: 0.5rem 0;
+    }
+    .nav-item img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+/* site description section styles 
+================================================================== */
+
+.site-description {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 0 auto;
+}
+
+.site-description h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.site-description p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.mission-statement {
+    text-align: center;
+    width: 90%;
+}
+
+.mission-statement span {
+    color: #2E5939;
+    font-size: 3rem;
+    font: bold;
+    font-style: italic;
+}
+
+/* tablet size screens */
+
+@media (max-width: 1200px) {
+    .site-description {
+        margin: 1rem;
+    }
+    .mission-statement {
+        width: 60%;
+        text-align: center;
+    }
+}
+
+/* product description section styles 
+================================================================== */
+
+.product-description, .employee-description {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: #29A678;
+    color: white;
+    margin: 5rem 0;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.info-box {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    background-color: #18191b;
+    color: white;
+}
+
+.info-box h2 {
+    text-transform: uppercase;
+}
+
+.info-box img {
+    width: 200px;
+    height: 200px;
+}
+
+.product-description.medium-screen {
+    display: none;
+}
+
+/*tablet size screens */
+@media (max-width: 1400px) {
+    .product-description.large-screen {
+        display: none;
+    }
+    .product-description.medium-screen {
+        display: block;
+    }
+    .medium-screen .products {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-box {
+        margin: 1rem;
+    }
+}
+
+/* employee presentation section styles 
+================================================================== */
+.info-box.employee img {
+    border-radius: 100px;
+}
+
+.employee-description.medium-screen {
+    display: none;
+}
+/* tablet size screens */
+
+@media (max-width: 1200px) {
+    .info-box.employee p {
+        min-height: 120px;
+    }
+    .description-heading {
+        text-align: center;
+        padding-top: 2rem;
+    }
+    .employee-description.medium-screen .products {
+        flex-direction: row;
+    }
+    .employee-description.medium-screen {
+        display: block;
+    }
+    .employee-description.large-screen {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+    .employee-description img {
+        display: none;
+    }
+    .info-box.employee h2 {
+        font-size: 1rem;
+    }
+    .info-box.employee p {
+        font-size: 0.9rem;
+    }
+}
+
+/* footer styles */
+
+footer {
+    background-color: #18191b;
+    color: white;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+
